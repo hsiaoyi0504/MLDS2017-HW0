@@ -1,4 +1,3 @@
-from __future__ import print_function
 import os
 import struct
 import numpy as np
@@ -9,11 +8,6 @@ from keras.layers import Convolution2D, MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
 
-"""
-Loosely inspired by http://abel.ee.ucla.edu/cvxopt/_downloads/mnist.py
-which is GPL licensed.
-"""
-
 def read_mnist(dataset = "training", path = "./data/"):
     if dataset is "training":
         fname_img = os.path.join(path, 'train-images-idx3-ubyte')
@@ -22,7 +16,7 @@ def read_mnist(dataset = "training", path = "./data/"):
         fname_img = os.path.join(path, 't10k-images-idx3-ubyte')
         fname_lbl = os.path.join(path, 't10k-labels-idx1-ubyte')
     else:
-        raise ValueError, "dataset must be 'testing' or 'training'"
+        raise ValueError("dataset must be 'testing' or 'training'")
     # Load everything in some numpy arrays
     with open(fname_lbl, 'rb') as flbl:
         magic, num = struct.unpack(">II", flbl.read(8))
