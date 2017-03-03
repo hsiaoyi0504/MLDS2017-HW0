@@ -86,7 +86,7 @@ model.compile(loss='categorical_crossentropy',optimizer='adadelta',metrics=['acc
 model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,verbose=1)
 classes = model.predict_classes(X_test, batch_size=10000)
 
-with open('./data/result.csv','w') as out_file:
+with open('./data/result_keras.csv','w') as out_file:
     out_file.write('id,label\n')
     for i in range(len(classes)):
         out_file.write(str(i)+','+str(classes[i])+'\n')
