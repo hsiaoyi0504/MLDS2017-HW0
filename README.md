@@ -5,7 +5,7 @@
 	- Training set accuracy: 0.9903
 	- Testing set accuracy: 0.9928
 - Run the script:
-	- Keras version:
+	- Keras version: using Keras 1.1.1 
 		- `python3 main_keras.py`
-	- TensorFlow version:
+	- TensorFlow version: using TensorFlow r1.0
 		- `python3 main_tf.py`
